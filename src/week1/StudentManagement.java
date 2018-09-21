@@ -4,9 +4,11 @@ public class StudentManagement {
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
     Student student[] = new Student[100];
 
-    public boolean sameGroup(Student s1, Student s2, Student s3) {
+    public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        return s1.getGroup().equals(s2.getGroup());
+        if(s1.getGroup() == s2.getGroup())
+            return true;
+        else return false;
     }
 
     void studentsByGroup() {
@@ -23,7 +25,7 @@ public class StudentManagement {
         // TODO: them doi tuong
 
         Student sv1 = new Student();
-        Student sv2 = new Student();
+        //Student sv2 = new Student();
         sv1.setName("Hoang Anh");
         sv1.setId(17020577);
         sv1.setGroup("INT2204");
@@ -36,28 +38,30 @@ public class StudentManagement {
         // TODO: cau 8
         Student hs1 = new Student();
         hs1.getInfo();
-        System.out.println("Info:   " + "\n" + hs1.getInfo());
-        Student  hs2 = new Student( "Student" , 000 , "uet@vnu.edu.vn" );
+        System.out.println("Info1:   " + hs1.getInfo());
+        Student  hs2 = new Student( "Hoang" , 123 , "gg@vnu.edu.vn" );
         hs2.getInfo();
+        System.out.println("Info2: " + hs2.getInfo());
         Student hs3 = new Student(sv1);
         hs3.getInfo();
+        System.out.println("Info3: " +hs3.getInfo());
+
         System.out.println("-----------------------------");
 
 
         // TODO: cau 9 + 10
+        StudentManagement a = new StudentManagement();
+        Student s1 = new Student("Nguyen",123,"hu@gmail.com");
 
-        Student s1 = new Student();
-        s1.setGroup("INT22041");
-        Student s2 = new Student();
-        s2.setGroup("INT22041");
-        Student s3 = new Student();
+        Student s2 = new Student("Hoang",345,"gg@gmail.com");
+
+        Student s3 = new Student("Anh",567,"ff@gmail.com");
         s3.setGroup("INT22042");
+        if(a.sameGroup(s1,s3)==true) System.out.println("cung lop");
+        else System.out.println("khac lop");
+        if(a.sameGroup(s1,s2)==true) System.out.println("cung lop");
+        else System.out.println("khac lop");
 
-        System.out.print("s1 cung group s2 : ");
-        System.out.println(s1.getGroup().equals(s2.getGroup()));
-        System.out.print("s3 cung group s1,s2 : ");
-        System.out.println(s1.getGroup().equals(s3.getGroup()));
-        System.out.println();
 
 
 
