@@ -11,7 +11,7 @@ public class StudentManagement {
 
     void studentsByGroup() {
         // TODO:
-        
+
     }
 
     void removeStudent(String id) {
@@ -30,7 +30,21 @@ public class StudentManagement {
         sv1.setEmail("nguyenhoanganh01a2@gmail.com");
         System.out.println("Name: " +sv1.getName());
         System.out.println("Info: " + "\n" +sv1.getInfo());
+        System.out.println("----------------------------");
 
+
+        // TODO: cau 8
+        Student hs1 = new Student();
+        hs1.getInfo();
+        System.out.println("Info:   " + "\n" + hs1.getInfo());
+        Student  hs2 = new Student( "Student" , 000 , "uet@vnu.edu.vn" );
+        hs2.getInfo();
+        Student hs3 = new Student(sv1);
+        hs3.getInfo();
+        System.out.println("-----------------------------");
+
+
+        // TODO: cau 9 + 10
 
         Student s1 = new Student();
         s1.setGroup("INT22041");
@@ -43,6 +57,7 @@ public class StudentManagement {
         System.out.println(s1.getGroup().equals(s2.getGroup()));
         System.out.print("s3 cung group s1,s2 : ");
         System.out.println(s1.getGroup().equals(s3.getGroup()));
+        System.out.println();
 
 
 
