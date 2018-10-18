@@ -1,11 +1,8 @@
 package week4.task1;
 
-/**
- * TODO: Tao Class Cha cua Cam Sanh, Cam Thanh Phong
- */
 public class Cam extends HoaQua {
-    private String color;
-    private String flavor;
+    protected String color;
+    protected String flavor;
 
     public Cam(String kind, String shade,String color,String flavor) {
         super(kind, shade);

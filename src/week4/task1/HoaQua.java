@@ -1,8 +1,5 @@
 package week4.task1;
 
-/**
- * TODO: Class Ong Noi
- */
 public class HoaQua {
     private String shade;
     private String kind;
