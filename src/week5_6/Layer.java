@@ -3,8 +3,8 @@ package week5_6;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Layer {
-    private ArrayList<Shape> shapes;
+public class Layer extends Diagram {
+    public ArrayList<Shape> shapes = new ArrayList<Shape>();
     public Layer(){
 
     }
@@ -29,7 +29,6 @@ public class Layer {
         }
     }
     public void removeCircle(){
-        Layer layer= new Layer();
         Iterator<Shape> iterator = shapes.iterator();
         while (iterator.hasNext()){
             Shape sh = iterator.next();

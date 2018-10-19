@@ -1,8 +1,8 @@
 package week5_6;
 
 public class Square extends Rectangle {
-    public Square(String color,boolean filled,double side){
-        super(color,filled,side,side);
+    public Square(String color,boolean filled,int x,int y,double side){
+        super(color,filled,x,y,side,side);
     }
 
     public double getSide(){
@@ -22,5 +22,10 @@ public class Square extends Rectangle {
     @Override
     public void setWeight(double side) {
         super.setWeight(side);
+    }
+
+    @Override
+    double Area() {
+        return getSide()*getSide();
     }
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 public class Diagram {
-    private ArrayList< Layer > layers;
+    public ArrayList< Layer > layers=new ArrayList<Layer>();
     public Diagram(){
 
     }
