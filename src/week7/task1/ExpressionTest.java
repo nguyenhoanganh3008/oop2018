@@ -14,5 +14,14 @@ public class ExpressionTest {
 
         System.out.println(square2+" = " +square2.evaluate());
 
+        try{
+            Numeral numeral = new Numeral(0);
+            Division division = new Division(numeral,numeral);
+            System.out.println(division.evaluate());
+        }catch (ArithmeticException e){
+            System.err.println("Mẫu số bằng 0!!!");
+        }
+
+
     }
 }
