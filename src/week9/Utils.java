@@ -34,30 +34,21 @@ public class Utils {
         printWriter.append("Them cau cuoi");
         printWriter.close();
     }
-    public static File findFileByName(String folderPath,String fileName){
-        File dir = new File(folderPath);
-        FilenameFilter filter = new FilenameFilter() {
-            public boolean accept
-                    (File dir, String name) {
-                return name.startsWith("r");
-            }
-        };
-        String[] children = dir.list(filter);
-        if (children == null) {
-            System.out.println("Either dir does not exist or is not a directory");
-        }
-        else {
-            for (int i=0; i<children.length; i++) {
-                String filename = children[i];
-                System.out.println(filename);
+    public static File findFileByName(String folderPath, String fileName){
+        File file = new File(folderPath);
+        for (File f: file.listFiles()) {
+            if (f.getName().equals(fileName)) {
+                System.out.println(f.getName());
+                return new File(f.getName());
             }
         }
-        return dir;
+        System.out.println("faile");
+        return null;
     }
     public static void main(String[] args) throws IOException {
         writeContentToFile("D:\\week9.txt");
         readContentFromFile("week9.txt");
-        findFileByName("D:","w");
+        findFileByName("D:","Word.java");
     }
 
 }
